@@ -1,0 +1,45 @@
+/* Your custom styles */
+body {
+    background-position: center bottom;
+    background-size: 100%;
+}
+
+.navbar-dark {
+    background-color: #1e1b1b !important;
+    border-top: solid 3px #c62828;
+    /* height: 150px; */
+}
+
+.nav-link {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.active {
+    color: #c62828 !important;
+    /* background-color: #1e1b1b !important; */
+}
+
+.nav-icon {
+    color: white !important;
+    font-size: 40px;
+}
+
+.navbar-nav > li {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#nav-right {
+    right: 20px;
+    top: 35%;
+    position: absolute;
+}
+
+.nav-left {
+    margin-left: 100px;
+}
+
+#content {
+    height: 100%;
+}
