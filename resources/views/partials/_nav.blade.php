@@ -1,27 +1,25 @@
-<nav class="navbar navbar-dark bg-dark" id="navbar">
-    <a class="navbar-brand nav-left" href="/"><img height="70px" src="img/vimo.png" alt="Vimo logo"></a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/"><img height="70px" src="img/vimo.png" alt="Vimo logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <ul class="navbar-nav mr-auto nav-left">
-        <li class="nav-item">
-            <a class="nav-link active" href="#">HOME</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">ROSTER</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">MATCHES</a>
-        </li>
-        <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
-        </a> -->
-    </ul>
-    
-    <ul class="navbar-nav mr-auto" id="nav-right">
-        <li class="nav-item">
-            <i class="fa fa-twitter-square nav-icon" aria-hidden="true"></i>                    
-        </li>
-        <li class="nav-item">
-            <i class="fa fa-facebook-square nav-icon" aria-hidden="true"></i>  
-        </li>
-    </ul>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/roster">ROSTER</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/matches">MATCHES</a>
+            </li>
+            <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+            </a> -->
+        </ul>
+        <i class="fa fa-twitter-square nav-icon" aria-hidden="true"></i> 
+        <i class="fa fa-facebook-square nav-icon" aria-hidden="true"></i> 
+    </div>
 </nav>

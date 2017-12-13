@@ -9,4 +9,12 @@ class PagesController extends Controller {
 	public function getHome() {
 		return view('pages.home');
 	}
+
+	public function getRoster() {
+		return view('pages.roster');
+	}
+
+	public function getMatches() {
+		return view('pages.matches');
+	}
 }

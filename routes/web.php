@@ -12,3 +12,6 @@
 */
 
 Route::get('/', 'PagesController@getHome');
+Route::get('/home', 'PagesController@getHome');
+Route::get('/roster', 'PagesController@getRoster');
+Route::get('/matches', 'PagesController@getMatches');
