@@ -4,6 +4,6 @@
 
 @section('content')
 
-
+alive
     
 @endsection
