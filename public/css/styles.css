@@ -1,0 +1,62 @@
+body {
+    background-image: url('../img/vimo-bg.png');
+    background-position: center top;
+    background-size: 210vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    border-radius: 0;
+    background-color: #1e1b1b !important;
+    border-top: solid 3px #c62828;
+    height: 75px;
+    margin: auto;
+}
+
+.nav-link {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.active {
+    color: #c62828 !important;
+    /* background-color: #1e1b1b !important; */
+}
+
+.nav-icon {
+    color: white !important;
+    font-size: 40px;
+}
+
+.navbar-nav {
+    top: 50%;
+    transform: translate(0,-50%);
+    position: relative;
+}
+
+.navbar-nav li a, .navbar-nav li i {
+    line-height: 40px;
+    padding: 0;
+}
+
+.navbar-nav > li {
+    padding-left: 30px;
+    padding-right: 30px;
+    list-style: none;
+}
+
+.navbar-brand {
+    line-height: 70px;
+    padding-top: 0;
+}
+
+#nav-right {
+    float: right;
+    margin-right: 30px !important;
+}
+
+.nav-left {
+    margin-left: 100px;
+}
