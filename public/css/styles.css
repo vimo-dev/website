@@ -17,7 +17,6 @@ body {
     border-radius: 0;
     background-color: #1e1b1b !important;
     border-top: solid 3px #c62828;
-    height: 75px;
     padding-top: 0;
     padding-bottom: 0;
     padding-left: 5%;
@@ -47,7 +46,7 @@ body {
 
 .nav-icon {
     color: white !important;
-    font-size: 40px;
+    font-size: 30px;
     margin-left: 20px;
 }
 

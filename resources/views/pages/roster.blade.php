@@ -17,7 +17,6 @@
                                 stuffstuffstuffstuffstuffstuff
                             </p>
                         </div>
-                        
                     </div>
                 </div>
             </div>

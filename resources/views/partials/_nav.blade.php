@@ -19,7 +19,15 @@
                 Dropdown
             </a> -->
         </ul>
-        <i class="fa fa-twitter-square nav-icon" aria-hidden="true"></i> 
-        <i class="fa fa-facebook-square nav-icon" aria-hidden="true"></i> 
+        <div class="collapse navbar-collapse hidden-xs">
+            <ul class="navbar-nav ml-auto">
+                <li>
+                    <a class="nav-link" href="https://twitter.com/"><i class="fa fa-twitter-square nav-icon" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                    <a class="nav-link" href="https://www.facebook.com/"><i class="fa fa-facebook-square nav-icon" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
