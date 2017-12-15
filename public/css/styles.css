@@ -78,3 +78,43 @@ body {
     max-width: 30vw;
     /* margin-right: 20vh !important; */
 }
+
+/* login area */
+.login-area a {
+    color: white;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.dropdown-menu {
+    width: 15vw;
+    padding: 20px;
+    padding-right: 40px;
+}
+
+.dropdown-menu input, input:focus {
+    color: #1e1b1b !important;
+    border-color: #1e1b1b !important;
+}
+
+.dropdown-menu a:hover {
+    color: #1e1b1b !important;
+}
+
+#pw-forgot:hover {
+    color: #c62828 !important;
+}
+
+.dropdown-item:hover {
+    background-color: white !important;
+    color: #c62828 !important;
+}
+
+.btn-dropdown-submit {
+    width: 100%;
+    background-color: #1e1b1b;
+}
+
+.btn-dropdown-submit:hover {
+    background-color: #c62828 !important;
+}

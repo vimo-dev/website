@@ -7,13 +7,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item {{ Request::is('/') ? 'active' : '' }}">
-                <a class="nav-link" href="/">HOME</a>
+                <a class="nav-link" href="{{ route('home') }}">HOME</a>
             </li>
             <li class="nav-item {{ Request::is('roster') ? 'active' : '' }}">
-                <a class="nav-link" href="/roster">ROSTER</a>
+                <a class="nav-link" href="{{ route('roster') }}">ROSTER</a>
             </li>
             <li class="nav-item {{ Request::is('matches') ? 'active' : '' }}">
-                <a class="nav-link" href="/matches">MATCHES</a>
+                <a class="nav-link" href="{{ route('matches') }}">MATCHES</a>
             </li>
             <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Dropdown
@@ -21,6 +21,40 @@
         </ul>
         <div class="collapse navbar-collapse hidden-xs">
             <ul class="navbar-nav ml-auto">
+                @guest
+                {{--  href {{ route('login') }}  --}}
+                <li class="nav-item dropdown login-area"><a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Login <i class="fa fa-sign-in" style="margin-left: 5px;" aria-hidden="true"></i></a>
+                    @include('auth.login')
+                </li>
+                <li class="nav-item dropdown login-area"><a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Register <i class="fa fa-pencil-square-o" style="margin-left: 5px;" aria-hidden="true"></i></a>
+                    @include('auth.register')
+                </li>
+
+                @else
+
+                <li class="nav-item dropdown login-area">
+                    <a href="#" class="nav-link dropdown-toggle" style="color: white;" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                        {{ Auth::user()->name }} <span class="caret"></span>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                                Logout 
+                                <i class="fa fa-sign-out" style="margin-left: 5px;" aria-hidden="true"></i>
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+
+                @endguest
+                
                 <li>
                     <a class="nav-link" href="https://twitter.com/"><i class="fa fa-twitter-square nav-icon" aria-hidden="true"></i></a>
                 </li>

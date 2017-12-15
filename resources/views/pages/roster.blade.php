@@ -14,7 +14,7 @@
                         </div>
                         <div class="row">
                             <p>
-                                stuffstuffstuffstuffstuffstuff
+
                             </p>
                         </div>
                     </div>
