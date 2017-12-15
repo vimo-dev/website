@@ -6,7 +6,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item {{ Request::is('/') ? 'active' : '' }}">
+            <li class="nav-item {{ Request::is('/') ? 'active' : '' }}{{ Request::is('home') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('home') }}">HOME</a>
             </li>
             <li class="nav-item {{ Request::is('roster') ? 'active' : '' }}">
@@ -39,7 +39,7 @@
 
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="{{ route('logout') }}"
+                            <a href="{{ route('logout') }}" id="dropdown-logout"
                                 onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
                                 Logout 

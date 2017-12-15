@@ -105,6 +105,10 @@ body {
     color: #c62828 !important;
 }
 
+#dropdown-logout:hover {
+    color: #c62828 !important;
+}
+
 .dropdown-item:hover {
     background-color: white !important;
     color: #c62828 !important;
