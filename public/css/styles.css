@@ -84,6 +84,9 @@ body {
     color: white;
     font-size: 16px;
     margin-right: 20px;
+    display: flex !important;
+    align-items: center !important;
+    height: 100%;
 }
 
 .dropdown-menu {
@@ -103,10 +106,12 @@ body {
 
 #pw-forgot:hover {
     color: #c62828 !important;
+    text-decoration: none !important;
 }
 
 #dropdown-logout:hover {
     color: #c62828 !important;
+    text-decoration: none !important;
 }
 
 .dropdown-item:hover {
@@ -117,8 +122,10 @@ body {
 .btn-dropdown-submit {
     width: 100%;
     background-color: #1e1b1b;
+    border-color: #1e1b1b !important;
 }
 
 .btn-dropdown-submit:hover {
     background-color: #c62828 !important;
+    border-color: #c62828 !important;
 }

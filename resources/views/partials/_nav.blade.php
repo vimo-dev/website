@@ -34,7 +34,7 @@
 
                 <li class="nav-item dropdown login-area">
                     <a href="#" class="nav-link dropdown-toggle" style="color: white;" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
-                        {{ Auth::user()->name }} <span class="caret"></span>
+                        {{ Auth::user()->username }} <span class="caret"></span>
                     </a>
 
                     <ul class="dropdown-menu">
