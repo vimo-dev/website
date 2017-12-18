@@ -11,6 +11,7 @@
 |
 */
 
+Route::get('/manage', 'PagesController@getManage')->name('manage');
 Route::get('/roster', 'PagesController@getRoster')->name('roster');
 Route::get('/matches', 'PagesController@getMatches')->name('matches');
 Route::get('/home', 'PagesController@getHome');

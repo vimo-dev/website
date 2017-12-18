@@ -17,4 +17,8 @@ class PagesController extends Controller {
 	public function getMatches() {
 		return view('pages.matches');
 	}
+
+	public function getManage() {
+		return view('pages.manage');
+	}
 }

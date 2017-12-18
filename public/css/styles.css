@@ -17,11 +17,15 @@ body {
     border-radius: 0;
     background-color: #1e1b1b !important;
     border-top: solid 3px #c62828;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-left: 5%;
     padding-right: 5% !important;
     font-weight: 500 !important;
+}
+
+.navbar-dark a{
+    color: rgba(255, 255, 255, 1.0) !important;
 }
 
 .navbar-brand {
@@ -42,6 +46,7 @@ body {
     background-color: #1e1b1b !important;
     border-bottom: solid #c62828 3px;
     line-height: 25px;
+    font-weight: bold;
 }
 
 .nav-icon {
@@ -92,7 +97,6 @@ body {
 .dropdown-menu {
     width: 15vw;
     padding: 20px;
-    padding-right: 60px;
 }
 
 .dropdown-menu input, input:focus {
@@ -104,9 +108,17 @@ body {
     color: #1e1b1b !important;
 }
 
+#pw-forgot {
+    color: #1e1b1b !important;
+}
+
 #pw-forgot:hover {
     color: #c62828 !important;
     text-decoration: none !important;
+}
+
+#dropdown-logout {
+    color: #1e1b1b !important;
 }
 
 #dropdown-logout:hover {
@@ -128,4 +140,15 @@ body {
 .btn-dropdown-submit:hover {
     background-color: #c62828 !important;
     border-color: #c62828 !important;
+}
+
+/* MANAGE SITE TABLES */
+.table {
+    font-size: 16px !important;
+}
+
+#users-table {
+    max-height: 45vh;
+    overflow-x: scroll;
+    overflow-y: scroll;
 }

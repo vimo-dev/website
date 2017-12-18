@@ -15,6 +15,19 @@
             <li class="nav-item {{ Request::is('matches') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('matches') }}">MATCHES</a>
             </li>
+
+            @auth
+            @if( Auth::user()->role >= 2)
+
+                <li class="nav-item" style="border-left: solid rgba(255,255,255,0.25) 2px;"></li>
+
+                <li class="nav-item {{ Request::is('manage') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('manage') }}">MANAGE</a>
+                </li>
+
+            @endif
+            @endauth
+
             <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Dropdown
             </a> -->
