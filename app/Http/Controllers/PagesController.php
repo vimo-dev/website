@@ -37,8 +37,7 @@ class PagesController extends Controller {
 		$userToUpdate->team_id = $request->team_id;
 		$userToUpdate->save();
 
-		$users = User::where('username', '!=', 'NULL')->orderBy('name', 'desc')->get();
 
-		return view('pages.manage', ['users' => $users]);
+		return redirect()->route('manage');
 	}
 }

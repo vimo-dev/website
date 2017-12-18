@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="/"><img height="70px" src="img/vimo.png" alt="Vimo logo"></a>
+    <a class="navbar-brand" href="/"><img height="70px" src="/img/vimo.png" alt="Vimo logo"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -21,7 +21,7 @@
 
                 <li class="nav-item" style="border-left: solid rgba(255,255,255,0.25) 2px;"></li>
 
-                <li class="nav-item {{ Request::is('manage') ? 'active' : '' }}">
+                <li class="nav-item {{ Request::is('manage') ? 'active' : '' }}{{ Request::is('manage/*') ? 'active' : '' }}">
                     <a class="nav-link" href="{{ route('manage') }}">MANAGE</a>
                 </li>
 

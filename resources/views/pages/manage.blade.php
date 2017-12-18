@@ -27,13 +27,13 @@
                                             <td><input id="role" type="number" class="form-control" name="role" value="{{ $user->role }}" min="0" max="2" required autofocus></td>
                                             <td><input id="team_id" type="number" class="form-control" name="team_id" value="{{ $user->team_id }}" min="0"></td>
                                             <td>{{ $user->country }}</td><td>{{ $user->date_of_birth }}</td>
-                                            <td><button type="submit" class="btn">Save</button></td>
+                                            <td><button type="submit" class="btn edit-button">Save</button></td>
                                         </form>
                                     @else
                                         <td>{{ $user->id }}</td><td>{{ $user->username }}</td><td>{{ $user->name }}</td>
                                         <td>{{ $user->email }}</td><td>{{ $user->role }}</td><td>{{ $user->team_id }}</td>
                                         <td>{{ $user->country }}</td><td>{{ $user->date_of_birth }}</td>
-                                        <td><a class="btn " href="/manage/edit/users/{{ $user->id }}" role="button">Edit</a></td>
+                                        <td><a class="btn edit-button" href="/manage/edit/users/{{ $user->id }}" role="button">Edit</a></td>
                                     @endif
                                 </tr>
                             @endforeach
@@ -43,7 +43,7 @@
                                     <td>{{ $user->id }}</td><td>{{ $user->username }}</td><td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td><td>{{ $user->role }}</td><td>{{ $user->team_id }}</td>
                                     <td>{{ $user->country }}</td><td>{{ $user->date_of_birth }}</td>
-                                    <td><a class="btn " href="/manage/edit/users/{{ $user->id }}" role="button">Edit</a></td>
+                                    <td><a class="btn edit-button" href="/manage/edit/users/{{ $user->id }}" role="button">Edit</a></td>
                                 </tr>
                             @endforeach
                         @endif

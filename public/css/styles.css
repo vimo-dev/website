@@ -11,6 +11,14 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+a {
+    color: #1e1b1b;
+}
+
+a:hover {
+    color: #c62828;
+}
+
 
 /* Navbar styles */
 .navbar {
@@ -144,11 +152,21 @@ body {
 
 /* MANAGE SITE TABLES */
 .table {
-    font-size: 16px !important;
+    font-size: 15px !important;
 }
 
 #users-table {
     max-height: 45vh;
     overflow-x: scroll;
     overflow-y: scroll;
+}
+
+.edit-button {
+    background-color: #1e1b1b !important;
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #c62828 !important;
+    color: #1e1b1b;
 }
