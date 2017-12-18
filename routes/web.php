@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('/manage/edit/{tabletoedit}/{id}', 'PagesController@getManage');
+Route::put('/manage/save/user/{id}', 'PagesController@saveUser')->name('saveUser');
 Route::get('/manage', 'PagesController@getManage')->name('manage');
 Route::get('/roster', 'PagesController@getRoster')->name('roster');
 Route::get('/matches', 'PagesController@getMatches')->name('matches');
