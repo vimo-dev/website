@@ -92,7 +92,7 @@ body {
 .dropdown-menu {
     width: 15vw;
     padding: 20px;
-    padding-right: 40px;
+    padding-right: 60px;
 }
 
 .dropdown-menu input, input:focus {

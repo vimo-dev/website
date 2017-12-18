@@ -13,7 +13,7 @@
 
 Route::get('/roster', 'PagesController@getRoster')->name('roster');
 Route::get('/matches', 'PagesController@getMatches')->name('matches');
-Route::get('/home', 'PagesController@getHome')->name('home');
-Route::get('/', 'PagesController@getHome');
+Route::get('/home', 'PagesController@getHome');
+Route::get('/', 'PagesController@getHome')->name('home');
 
 Auth::routes();
