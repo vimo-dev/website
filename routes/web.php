@@ -12,11 +12,14 @@
 */
 
 Route::get('/manage/edit/{tabletoedit}/{id}', 'PagesController@getManage')->name('edit');
-Route::put('/manage/save/user/{id}', 'PagesController@saveUser')->name('saveUser');
 Route::get('/manage', 'PagesController@getManage')->name('manage');
 Route::get('/roster', 'PagesController@getRoster')->name('roster');
 Route::get('/matches', 'PagesController@getMatches')->name('matches');
 Route::get('/home', 'PagesController@getHome');
 Route::get('/', 'PagesController@getHome')->name('home');
+
+Route::put('/manage/save/user/{id}', 'PagesController@saveUser')->name('saveUser');
+Route::put('/manage/save/team/{id}', 'PagesController@saveTeam')->name('saveTeam');
+Route::put('/manage/create/team', 'PagesController@createTeam')->name('createTeam');
 
 Auth::routes();

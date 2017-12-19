@@ -19,6 +19,10 @@ a:hover {
     color: #c62828;
 }
 
+td {
+    vertical-align: middle !important;
+}
+
 
 /* Navbar styles */
 .navbar {
@@ -163,10 +167,32 @@ a:hover {
 
 .edit-button {
     background-color: #1e1b1b !important;
-    color: white;
+    color: white !important;
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
 }
 
 .edit-button:hover {
     background-color: #c62828 !important;
-    color: #1e1b1b;
+    color: white !important;
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+}
+
+td input {
+    max-width: 60px;
+}
+
+.add-button {
+    width: 40px;
+    height: 40px;
+    font-size: 23.5px;
+}
+
+.add-button:focus {
+    box-shadow: none;
+}
+
+.btn:focus, .form-control:focus {
+    box-shadow: none;
 }
