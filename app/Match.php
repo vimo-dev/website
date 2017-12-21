@@ -7,7 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Match extends Model
 {
     //
-    public function team() {
-        return $this->belongsTo('App\Team');
+    public function team1() {
+        return $this->belongsTo('App\Team', 'id', 'team1_id');
+    }
+
+    public function team2() {
+        return $this->belongsTo('App\Team', 'id', 'team1_id');
     }
 }

@@ -31,7 +31,15 @@ class User extends Authenticatable
         return $this->belongsTo('App\Team');
     }
 
-    public function teamroles() {
-        return $this->belongsToMany('App\Teamroles');
+    public function siterole() {
+        return $this->belongsTo('App\Siterole');
+    }
+
+    public function ingamerole() {
+        return $this->belongsTo('App\Ingamerole');
+    }
+
+    public function teamrole() {
+        return $this->belongsTo('App\Teamrole');
     }
 }
