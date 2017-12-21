@@ -33,43 +33,4 @@ class PagesController extends Controller {
 		}
 		return view('pages.manage', ['users' => $users, 'teams' => $teams]);
 	}
-
-	public function saveUser(Request $request, $id) {
-		if (Auth::user()->role < 2) {
-			return redirect()->route('manage');
-		}
-		
-		$userToUpdate = User::find($id);
-		$userToUpdate->role = $request->role;
-		$userToUpdate->team_id = $request->team_id;
-		$userToUpdate->save();
-
-		return redirect()->route('manage');
-	}
-
-	public function saveTeam(Request $request, $id) {
-		if (Auth::user()->role < 2) {
-			return redirect()->route('manage');
-		}
-		
-		$team = Team::find($id);
-		$team->tag = $request->tag;
-		$team->name = $request->name;
-		$team->save();
-
-		return redirect()->route('manage');
-	}
-
-	public function createTeam(Request $request) {
-		if (Auth::user()->role < 2) {
-			return redirect()->route('manage');
-		}
-
-		$team = new Team;
-		$team->tag = $request->tag;
-		$team->name = $request->name;
-		$team->save();
-
-		return redirect()->route('manage');
-	}
 }

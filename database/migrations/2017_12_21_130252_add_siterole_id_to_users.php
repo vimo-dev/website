@@ -15,7 +15,7 @@ class AddSiteroleIdToUsers extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             //
-            $table->integer('siterole_id')->nullable();
+            $table->integer('siterole_id')->nullable()->default(0);
         });
     }
 

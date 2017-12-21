@@ -4,7 +4,7 @@
 
 @section('content')
 @auth {{--  TODO: YOU ARE NOT AN ADMIN MSG  --}}
-@if(Auth::user()->role >= 2)
+@if(Auth::user()->siterole_id >= 2)
     <div class="row justify-content-md-center">
         <div class="col-md-10">
             <div class="row">

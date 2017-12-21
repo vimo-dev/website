@@ -17,7 +17,7 @@
             </li>
 
             @auth
-            @if( Auth::user()->role >= 2)
+            @if( Auth::user()->siterole_id >= 2)
 
                 <li class="nav-item" style="border-left: solid rgba(255,255,255,0.25) 2px;"></li>
 

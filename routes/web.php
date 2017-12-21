@@ -18,8 +18,8 @@ Route::get('/matches', 'PagesController@getMatches')->name('matches');
 Route::get('/home', 'PagesController@getHome');
 Route::get('/', 'PagesController@getHome')->name('home');
 
-Route::put('/manage/save/user/{id}', 'PagesController@saveUser')->name('saveUser');
-Route::put('/manage/save/team/{id}', 'PagesController@saveTeam')->name('saveTeam');
-Route::put('/manage/create/team', 'PagesController@createTeam')->name('createTeam');
+Route::put('/manage/save/user/{id}', 'DatabaseController@saveUser')->name('saveUser');
+Route::put('/manage/save/team/{id}', 'DatabaseController@saveTeam')->name('saveTeam');
+Route::put('/manage/create/team', 'DatabaseController@createTeam')->name('createTeam');
 
 Auth::routes();
