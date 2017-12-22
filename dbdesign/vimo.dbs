@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="vimo" id="Project_493dc6a" template="Default" database="MySql" >
+	<schema name="vimo" catalogname="vimo" >
+		<table name="ingameroles" >
+			<column name="id" type="int" length="10" decimal="0" jt="4" mandatory="y" unsigned="y" autoincrement="y" />
+			<column name="name" type="varchar" length="20" decimal="0" jt="12" mandatory="y" />
+			<column name="created_at" type="timestamp" length="19" decimal="0" jt="93" />
+			<column name="updated_at" type="timestamp" length="19" decimal="0" jt="93" />
+			<index name="pk_ingameroles" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+		</table>
+		<table name="matches" >
+			<column name="id" type="int" length="10" decimal="0" jt="4" mandatory="y" unsigned="y" autoincrement="y" />
+			<column name="team1_id" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="to_be_played_at" type="timestamp" length="19" decimal="0" jt="93" mandatory="y" >
+				<defo>CURRENT_TIMESTAMP</defo>
+			</column>
+			<column name="created_at" type="timestamp" length="19" decimal="0" jt="93" />
+			<column name="updated_at" type="timestamp" length="19" decimal="0" jt="93" />
+			<column name="team2_id" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<index name="pk_matches" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<index name="idx_matches_team1_id" unique="NORMAL" >
+				<column name="team1_id" />
+			</index>
+			<index name="idx_matches_team2_id" unique="NORMAL" >
+				<column name="team2_id" />
+			</index>
+			<fk name="fk_matches_teams" to_schema="vimo" to_table="teams" >
+				<fk_column name="team1_id" pk="id" />
+			</fk>
+			<fk name="fk_matches_teams_0" to_schema="vimo" to_table="teams" >
+				<fk_column name="team2_id" pk="id" />
+			</fk>
+		</table>
+		<table name="migrations" >
+			<column name="id" type="int" length="10" decimal="0" jt="4" mandatory="y" unsigned="y" autoincrement="y" />
+			<column name="migration" type="varchar" length="255" decimal="0" jt="12" mandatory="y" />
+			<column name="batch" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<index name="pk_migrations" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+		</table>
+		<table name="password_resets" >
+			<column name="email" type="varchar" length="255" decimal="0" jt="12" mandatory="y" />
+			<column name="token" type="varchar" length="255" decimal="0" jt="12" mandatory="y" />
+			<column name="created_at" type="timestamp" length="19" decimal="0" jt="93" />
+			<index name="password_resets_email_index" unique="NORMAL" >
+				<column name="email" />
+			</index>
+		</table>
+		<table name="siteroles" >
+			<column name="id" type="int" length="10" decimal="0" jt="4" mandatory="y" unsigned="y" autoincrement="y" />
+			<column name="name" type="varchar" length="10" decimal="0" jt="12" mandatory="y" />
+			<column name="created_at" type="timestamp" length="19" decimal="0" jt="93" />
+			<column name="updated_at" type="timestamp" length="19" decimal="0" jt="93" />
+			<index name="pk_siteroles" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+		</table>
+		<table name="teamroles" >
+			<column name="id" type="int" length="10" decimal="0" jt="4" mandatory="y" unsigned="y" autoincrement="y" />
+			<column name="team_id" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="name" type="varchar" length="20" decimal="0" jt="12" mandatory="y" />
+			<column name="created_at" type="timestamp" length="19" decimal="0" jt="93" />
+			<column name="updated_at" type="timestamp" length="19" decimal="0" jt="93" />
+			<index name="pk_teamroles" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<index name="idx_teamroles_team_id" unique="NORMAL" >
+				<column name="team_id" />
+			</index>
+			<fk name="fk_teamroles_teams" to_schema="vimo" to_table="teams" >
+				<fk_column name="team_id" pk="id" />
+			</fk>
+		</table>
+		<table name="teams" >
+			<column name="id" type="int" length="10" decimal="0" jt="4" mandatory="y" unsigned="y" autoincrement="y" />
+			<column name="tag" type="varchar" length="10" decimal="0" jt="12" mandatory="y" />
+			<column name="name" type="varchar" length="30" decimal="0" jt="12" mandatory="y" />
+			<column name="created_at" type="timestamp" length="19" decimal="0" jt="93" />
+			<column name="updated_at" type="timestamp" length="19" decimal="0" jt="93" />
+			<index name="pk_teams" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+		</table>
+		<table name="users" >
+			<column name="id" type="int" length="10" decimal="0" jt="4" mandatory="y" unsigned="y" autoincrement="y" />
+			<column name="name" type="varchar" length="50" decimal="0" jt="12" mandatory="y" />
+			<column name="username" type="varchar" length="20" decimal="0" jt="12" mandatory="y" />
+			<column name="email" type="varchar" length="255" decimal="0" jt="12" mandatory="y" />
+			<column name="password" type="varchar" length="60" decimal="0" jt="12" mandatory="y" />
+			<column name="team_id" type="int" length="10" decimal="0" jt="4" />
+			<column name="country" type="varchar" length="20" decimal="0" jt="12" />
+			<column name="date_of_birth" type="date" length="10" decimal="0" jt="91" />
+			<column name="remember_token" type="varchar" length="100" decimal="0" jt="12" />
+			<column name="created_at" type="timestamp" length="19" decimal="0" jt="93" />
+			<column name="updated_at" type="timestamp" length="19" decimal="0" jt="93" />
+			<column name="siterole_id" type="int" length="10" decimal="0" jt="4" />
+			<column name="ingamerole_id" type="int" length="10" decimal="0" jt="4" />
+			<column name="teamrole_id" type="int" length="10" decimal="0" jt="4" />
+			<index name="pk_users" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<index name="users_email_unique" unique="UNIQUE" >
+				<column name="email" />
+			</index>
+			<index name="users_username_unique" unique="UNIQUE" >
+				<column name="username" />
+			</index>
+			<index name="idx_users_team_id" unique="NORMAL" >
+				<column name="team_id" />
+			</index>
+			<index name="idx_users_siterole_id" unique="NORMAL" >
+				<column name="siterole_id" />
+			</index>
+			<index name="idx_users_ingamerole_id" unique="NORMAL" >
+				<column name="ingamerole_id" />
+			</index>
+			<index name="idx_users_teamrole_id" unique="NORMAL" >
+				<column name="teamrole_id" />
+			</index>
+			<fk name="fk_users_teams" to_schema="vimo" to_table="teams" >
+				<fk_column name="team_id" pk="id" />
+			</fk>
+			<fk name="fk_users_siteroles" to_schema="vimo" to_table="siteroles" >
+				<fk_column name="siterole_id" pk="id" />
+			</fk>
+			<fk name="fk_users_ingameroles" to_schema="vimo" to_table="ingameroles" >
+				<fk_column name="ingamerole_id" pk="id" />
+			</fk>
+			<fk name="fk_users_teamroles" to_schema="vimo" to_table="teamroles" >
+				<fk_column name="teamrole_id" pk="id" />
+			</fk>
+		</table>
+	</schema>
+	<connector name="vimo" database="MySql" driver_class="com.mysql.jdbc.Driver" driver_jar="mysql-connector-java-5.1.44-bin.jar" driver_desc="Standard" host="localhost" port="3306" instance="vimo" user="root" passwd="NUFkdUt6eDNkeEtw" />
+	<layout name="Default Layout" id="Layout_4eab242" show_relation="columns" >
+		<entity schema="vimo" name="users" color="bfd4f5" x="45" y="45" />
+		<entity schema="vimo" name="ingameroles" color="bfd4f5" x="60" y="375" />
+		<entity schema="vimo" name="teams" color="bfd4f5" x="345" y="60" />
+		<entity schema="vimo" name="teamroles" color="bfd4f5" x="210" y="105" />
+		<entity schema="vimo" name="matches" color="bfd4f5" x="330" y="255" />
+		<entity schema="vimo" name="siteroles" color="bfd4f5" x="195" y="345" />
+	</layout>
+	<layout name="Sample Layout with Tools" id="Layout_51309ca" show_column_type="y" show_relation="columns" >
+		<entity schema="vimo" name="ingameroles" color="bfd4f5" x="465" y="405" />
+		<entity schema="vimo" name="matches" color="bfd4f5" x="675" y="405" />
+		<entity schema="vimo" name="migrations" color="bfd4f5" x="465" y="570" />
+		<entity schema="vimo" name="password_resets" color="bfd4f5" x="255" y="570" />
+		<entity schema="vimo" name="siteroles" color="bfd4f5" x="255" y="405" />
+		<entity schema="vimo" name="teamroles" color="bfd4f5" x="255" y="225" />
+		<entity schema="vimo" name="teams" color="bfd4f5" x="45" y="405" />
+		<entity schema="vimo" name="users" color="bfd4f5" x="465" y="75" />
+		<callout x="465" y="330" pointer="NO" >
+			<comment><![CDATA[Double-click any table, column or foreign key to edit, right-click to start one of the tools below.
+Use the Relational Data Browse for simultaneously exploring data from multiple tables.
+All tools will be saved to project file and can be reopen.]]></comment>
+		</callout>
+		<group name="ingameroles" color="ecf0f7" >
+			<entity schema="vimo" name="ingameroles" />
+			<entity schema="vimo" name="matches" />
+			<entity schema="vimo" name="migrations" />
+			<entity schema="vimo" name="password_resets" />
+			<entity schema="vimo" name="siteroles" />
+			<entity schema="vimo" name="teamroles" />
+			<entity schema="vimo" name="users" />
+			<entity schema="vimo" name="teams" />
+		</group>
+		<script name="Sample SQL Editor" id="Editor_4cdd8fb" language="SQL" >
+			<string><![CDATA[SELECT * 
+FROM
+	vimo.ingameroles s;]]></string>
+		</script>
+		<browser id="Browse_12649bc" name="Sample Relational Data Browse" confirm_updates="y" >
+			<browse_table schema="vimo" entity="ingameroles" x="20" y="20" width="400" height="300" />
+		</browser>
+		<query id="Query_2464bee" name="Sample Query Builder" >
+			<query_table schema="vimo" name="ingameroles" alias="i" x="45" y="45" >
+				<column name="id" />
+				<column name="name" />
+				<column name="created_at" />
+				<column name="updated_at" />
+			</query_table>
+		</query>
+	</layout>
+</project>
